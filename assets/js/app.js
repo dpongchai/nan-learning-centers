@@ -62,9 +62,9 @@
   function initMap() {
     map = L.map("map", { zoomSnap: 0.25, minZoom: 8, maxZoom: 18 });
     baseLayers = {
-      map: L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        maxZoom: 19, subdomains: "abcd",
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      map: L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }),
       satellite: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
         maxZoom: 18, attribution: "Imagery &copy; Esri",
@@ -79,7 +79,7 @@
       polys.forEach((p) => holes.push(p[0].map(([x, y]) => [y, x])));
     });
     L.polygon([[[-89, -179], [-89, 179], [89, 179], [89, -179]], ...holes], {
-      interactive: false, stroke: false, fillColor: "#1E2B4A", fillOpacity: 0.55,
+      interactive: false, stroke: false, fillColor: "#1E2B4A", fillOpacity: 0.35,
     }).addTo(map);
 
     ampLayer = L.geoJSON(geo.amp, {
