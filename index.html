@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ศูนย์การเรียนรู้เมืองน่าน | Nan Learning Centers</title>
+  <meta name="description" content="แผนที่ศูนย์การเรียนรู้ด้านเกษตร ป่าชุมชน ภูมิปัญญา และอาชีพ ทั่วจังหวัดน่าน">
+  <meta property="og:title" content="ศูนย์การเรียนรู้เมืองน่าน">
+  <meta property="og:description" content="แผนที่ศูนย์การเรียนรู้ด้านเกษตร ป่าชุมชน ภูมิปัญญา และอาชีพ ทั่วจังหวัดน่าน">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=Chonburi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="panel">
+      <header>
+        <div class="top">
+          <div>
+            <h1 data-t="title">ศูนย์การเรียนรู้เมืองน่าน</h1>
+            <p class="sub" data-t="subtitle"></p>
+          </div>
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="th" aria-pressed="true">ไทย</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+        <div class="stats" id="stats"></div>
+      </header>
+      <div class="filters">
+        <input class="search" id="q" type="search" autocomplete="off">
+        <div class="row">
+          <select id="amp" aria-label="District"></select>
+          <select id="course" aria-label="Course"></select>
+        </div>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="count"><span id="count"></span><button type="button" id="reset" data-t="reset"></button></div>
+      <div class="list" id="list"><div class="empty" data-t="loading">กำลังโหลดข้อมูล…</div></div>
+      <footer class="foot" data-t="footer"></footer>
+    </aside>
+    <main class="mapwrap">
+      <div id="map" role="region" aria-label="Map"></div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
